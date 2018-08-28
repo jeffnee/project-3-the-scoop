@@ -121,6 +121,10 @@ function getArticle(url, request) {
 
 function createArticle(url, request) {
   console.log('createArticle');
+  console.log(`
+    request[0]=${request[0]}
+    request[1]=${request[1]}
+    `);
   const requestArticle = request.body && request.body.article;
   console.log(`reqArt= ${requestArticle}`);
   const response = {};
@@ -255,7 +259,10 @@ function downvote(item, username) {
 
 
 function createComment(url, request) {
-  console.log('createComment');
+  console.log(`
+    request[0]=${request[0]}
+    request[1]=${request[1]}
+    `);
   const requestComment = request.body && request.body.comment;
   const response = {};
   console.log(`
